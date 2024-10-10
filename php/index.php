@@ -17,7 +17,6 @@ require_once __DIR__ ."/../classes/ProductsType.php"
      <link rel="stylesheet" href=" 	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <title>PHP OOP 2</title>
 </head>
-<body>
-        
+<body>     
 </body>
 </html>

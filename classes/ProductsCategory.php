@@ -1,5 +1,5 @@
 <?php
-class ProductsCategory {
+class ProductsCategory extends Products {
     private $categoryId, $categoryName, $description;
 }
 
