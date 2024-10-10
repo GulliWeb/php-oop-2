@@ -1,11 +1,77 @@
-/* Reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+    background-color: #000000;
+    color: #ffffff;
 }
 
-/* Generals */
-body{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    border: 5px solid transparent;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    background-clip: padding-box;
+    position: relative;
+    transition: border-color 0.4s, box-shadow 0.4s;
+    overflow: hidden;
+    margin: 10px;
+    width: 300px;
+}
+
+.card:hover {
+    border-color: #ff6f61;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.card-text {
+    color: #ffffff;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 111, 97, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 0;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    }
+    50% {
+        background: linear-gradient(135deg, #ff6f61, #f12711);
+    }
+    100% {
+        background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    }
+}
+
+.card {
+    animation: gradient-animation 8s ease infinite;
 }
