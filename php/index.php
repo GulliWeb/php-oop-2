@@ -17,9 +17,9 @@ $toyType = new ProductsType("Gioco");
 $bedType = new ProductsType("Cuccia");
 
 // Creo dei nuovi OGGETTI products e li aggiungo al mio Ecommerce
-$product1 = new Products("Croccantini", 25.99, "https://www.google.com/url?sa=i&url=https%3A%2F%2Fvalerioguiggi.it%2Fcambio-graduale-croccantini%2F&psig=AOvVaw19HBPH32XYhIMz2gXlmtPz&ust=1728662764720000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCND7iuOYhIkDFQAAAAAdAAAAABAI", $dogCategory, $foodType);
-$product2 = new Products("Palla di gomma", 10.50, "https://www.google.com/imgres?q=palla%20di%20gomma&imgurl=https%3A%2F%2Fwww.sportgym.it%2Fshop-calcio%2F186-large_default%2Fpallone-in-gomma-spugna-oe-cm-20.jpg&imgrefurl=https%3A%2F%2Fwww.sportgym.it%2Fshop-calcio%2Fpalloni-calcetto-portapalloni%2F86-pallone-in-gomma-spugna-oe-cm-20.html&docid=pEVLd2NclAIZbM&tbnid=6tjZbWhjSNUSAM&vet=12ahUKEwia5cTsmISJAxWBgv0HHRD1NncQM3oECBsQAA..i&w=800&h=800&hcb=2&ved=2ahUKEwia5cTsmISJAxWBgv0HHRD1NncQM3oECBsQAA", $dogCategory, $toyType);
-$product3 = new Products("Cuscino per Gatti", 20.00, "https://www.google.com/imgres?q=cuscino%20gatti&imgurl=https%3A%2F%2Fwww.donarturo.it%2Fcdn%2Fshop%2Fproducts%2FCuscino-gatti-boucle-panna-con-gatto.jpg%3Fv%3D1664547170%26width%3D1445&imgrefurl=https%3A%2F%2Fwww.donarturo.it%2Fproducts%2Fguanciale-un-tubo-cuscino-gatto&docid=XQq5Nj1-izpTeM&tbnid=4SCAfZWJiGZ9sM&vet=12ahUKEwimidn0mISJAxVy7bsIHY5YOZQQM3oECGUQAA..i&w=1200&h=960&hcb=2&ved=2ahUKEwimidn0mISJAxVy7bsIHY5YOZQQM3oECGUQAA", $catCategory, $bedType);
+$product1 = new Products("Croccantini", 25.99, "https://www.robinsonpetshop.it/news/cms2017/wp-content/uploads/2019/08/crocchette-italiane.png", $dogCategory, $foodType);
+$product2 = new Products("Palla di gomma", 10.50, "https://static.zoomalia.com/prod_img/13843/xl_balle-22707.jpg", $dogCategory, $toyType);
+$product3 = new Products("Cuscino per Gatti", 20.00, "https://www.donarturo.it/cdn/shop/products/Cuscino-gatti-boucle-panna-con-gatto.jpg?v=1664547170&width=1445", $catCategory, $bedType);
 
 $store->addProduct($product1);
 $store->addProduct($product2);
@@ -56,7 +56,7 @@ $store->addProduct($product3);
                 </div>
             <?php endforeach; ?>
         </div>
-        <div class="andrea-gulli">Made with &hearts; by Andrea Gulli</div>
+        <div style="width: 100%; text-align: center; " class="andrea-gulli">Made with &hearts; by Andrea Gulli</div>
     </div>
 </body>
 </html>
