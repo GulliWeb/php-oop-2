@@ -1,14 +1,14 @@
 <?php
-// Creo la classe ecommerce
+// Classe Ecommerce
 class Ecommerce {
     private $products = [];
 
-    // Metodo per aggiungere prodotti
-    public function addProduct($product) {
-        $this->products[] = $product;
+    // Metodo Setter per aggiungere i prodotti
+    public function setProducts($products) {
+        $this->products = $products;
     }
 
-    // Funzione per restituire i prodotti
+    // Metodo getter per ritornare i prodotti
     public function getProducts() {
         return $this->products;
     }
