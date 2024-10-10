@@ -1,6 +1,9 @@
 <?php
 // Importo i file delle mie classi nel mio index PHP
-require_once __DIR__ ."/../classes/Ecommerce.php"
+require_once __DIR__ ."/../classes/Ecommerce.php";
+require_once __DIR__ ."/../classes/Products.php";
+require_once __DIR__ ."/../classes/ProductsCategory.php";
+require_once __DIR__ ."/../classes/ProductsType.php"
 ?>
 
 <!DOCTYPE html>
