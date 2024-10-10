@@ -28,8 +28,7 @@ body {
 }
 
 .card img {
-    width: 100%;
-    height: auto;
+    max-height: 150px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
