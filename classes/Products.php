@@ -6,6 +6,8 @@ require_once __DIR__ ."/../traits/StillAvailable.php";
 class Products {
     private $name, $price,  $image, $category, $type;
 
+    use StillAvailable;
+
     // Metodo costruttore
     public function __construct($name, $price, $image, ProductsCategory $category, ProductsType $type) {
         $this->name = $name;
