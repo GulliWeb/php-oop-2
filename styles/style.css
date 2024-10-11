@@ -9,6 +9,10 @@ body {
     align-items: center;
 }
 
+.card img{
+    max-height: 160px;
+}
+
 #title{
     font-size: 50px;
     font-family: cursive;

@@ -1,10 +1,21 @@
 <?php
+
+// Definisco la classe per la mia exception
+class StockException extends Exception {
+    public function __construct($message) {
+        parent::__construct($message);
+    }
+}
+
 trait StillAvailable {
     // Aggiungo una variabile di istanza privata per lo stock merci
     private $stock; 
 
-    // Metodo per impostare il valore iniziale dello stock
+    // Metodo per impostare il valore iniziale dello stock e controllare tramite EXCEPTION che il valore iniziale merce sia >= 0
     public function setStock($quantity) {
+        if ($quantity < 0) {
+            throw new StockException("La quantità di stock non può essere negativa.");
+        }
         $this->stock = $quantity;
     }
 
