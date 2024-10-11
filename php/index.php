@@ -17,9 +17,9 @@ $toyType = new ProductsType("Gioco");
 $bedType = new ProductsType("Cuccia");
 
 // Creo dei nuovi OGGETTI products e li aggiungo al mio Ecommerce
-$product1 = new Products("Croccantini", 25.99, "https://www.robinsonpetshop.it/news/cms2017/wp-content/uploads/2019/08/crocchette-italiane.png", $dogCategory, $foodType);
-$product2 = new Products("Palla di gomma", 10.50, "https://static.zoomalia.com/prod_img/13843/xl_balle-22707.jpg", $dogCategory, $toyType);
-$product3 = new Products("Cuscino per Gatti", 20.00, "https://www.donarturo.it/cdn/shop/products/Cuscino-gatti-boucle-panna-con-gatto.jpg?v=1664547170&width=1445", $catCategory, $bedType);
+$product1 = new Products("Croccantini", 25.99, "https://www.robinsonpetshop.it/news/cms2017/wp-content/uploads/2019/08/crocchette-italiane.png", $dogCategory, $foodType, 20);
+$product2 = new Products("Palla di gomma", 10.50, "https://static.zoomalia.com/prod_img/13843/xl_balle-22707.jpg", $dogCategory, $toyType, 0);
+$product3 = new Products("Cuscino per Gatti", 20.00, "https://www.donarturo.it/cdn/shop/products/Cuscino-gatti-boucle-panna-con-gatto.jpg?v=1664547170&width=1445", $catCategory, $bedType, 7);
 
 $store->addProduct($product1);
 $store->addProduct($product2);
@@ -51,6 +51,13 @@ $store->addProduct($product3);
                             <p class="card-text">Prezzo: <?= $product->getPrice(); ?>€</p>
                             <p class="card-text">Categoria: <?= $product->getCategory()->getName(); ?></p>
                             <p class="card-text">Tipo: <?= $product->getType()->getType(); ?></p>
+                            <!-- TRAITS per verificarne la disponibilità -->
+                            <p class="card-text">
+                            Stato: 
+                            <span class="<?= $product->isAvailable() ? 'text-success' : 'text-danger' ?>">
+                                <?= $product->isAvailable() ? 'Disponibile' : 'Non disponibile'; ?>
+                            </span>
+                        </p>
                         </div>
                     </div>
                 </div>

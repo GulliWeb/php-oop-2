@@ -9,12 +9,18 @@ class Products {
     use StillAvailable;
 
     // Metodo costruttore
-    public function __construct($name, $price, $image, ProductsCategory $category, ProductsType $type) {
+    public function __construct($name, $price, $image, ProductsCategory $category, ProductsType $type, $stock = 0) {
         $this->name = $name;
         $this->price = $price;
         $this->image = $image;
         $this->category = $category;
         $this->type = $type;
+        $this->setStock($stock);
+    }
+
+    // Metodo per verificare se il prodotto è disponibile grazie al traits
+    public function printAvailability() {
+        return ($this->isAvailable());
     }
 
     // Metodi Getter
