@@ -34,12 +34,12 @@ $store->addProduct($product3);
     <!-- Bootstrap -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
      <!-- Css -->
-      <link rel="stylesheet" href="../styles/style.css">
+     <link rel="stylesheet" href="../styles/style.css">
     <title>PHP OOP 2</title>
 </head>
 <body>     
 <div class="container">
-        <h1 class="text-center text-white pb-3">Prodotti per Animali</h1>
+        <h1 id="title" class="text-center text-white pb-3 fs-1">Prodotti per Animali</h1>
         <div class="row">
             <!-- Ciclo foreach per raccogliere e successivamente stampare i prodotti -->
             <?php foreach ($store->getProducts() as $product): ?>

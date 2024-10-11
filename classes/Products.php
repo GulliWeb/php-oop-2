@@ -1,4 +1,8 @@
 <?php
+
+// Importo il traits nel mio file
+require_once __DIR__ ."/../traits/StillAvailable.php";
+
 class Products {
     private $name, $price,  $image, $category, $type;
 
